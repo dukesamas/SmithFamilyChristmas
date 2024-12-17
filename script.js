@@ -41,7 +41,7 @@ function displayQuestion() {
     const optionsElement = document.getElementById("options");
 
     // Set the week number and question
-    weekNumberElement.textContent = "Week " + weekNumber;
+    weekNumberElement.textContent = weekNumber;
     const question = questions[weekNumber - 1] || { question: "No more questions for this year!" };
     questionElement.textContent = question.question;
 
