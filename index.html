@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekly Questions</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+    <!-- Link to the CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Import Fredoka One Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Smith Family Question Of The Week!</h1>
-        <div id="question-container">
-            <p id="question">Loading question...</p>
-        </div>
-        <footer>
-            <p>Week <span id="week-number"></span> of the Year</p>
-        </footer>
-    </div>
+        <p id="week-number"></p> <!-- This will be filled with the week number -->
+        <p id="question"></p> <!-- This will be filled with the current question -->
 
-    <div>
-        <input type="text" id="answer-input" placeholder="Your answer">
+        <div id="options"></div> <!-- This will be filled with multiple choice options -->
+
         <button onclick="submitAnswer()">Submit</button>
+        <footer>&copy; 2024 Your Name</footer>
     </div>
 
-    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+    <!-- Link to the separate JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
