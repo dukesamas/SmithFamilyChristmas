@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Fredoka One', cursive; /* Fun, modern font */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #87CEFA; /* Light blue background */
+    background-image: linear-gradient(45deg, #4682B4 25%, transparent 25%, transparent 50%, #4682B4 50%, #4682B4 75%, transparent 75%, transparent);
+    background-size: 40px 40px; /* Creates dark blue diagonal stripes */
     margin: 0;
 }
 
@@ -14,7 +18,42 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 320px; /* Slightly wider */
+}
+
+#question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#options {
+    text-align: left; /* Align options under the question */
+    margin-top: 10px;
+    line-height: 1.8; /* Adds spacing between options */
+}
+
+label {
+    display: block; /* Make each option appear on a new line */
+    margin: 5px 0;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px;
+}
+
+button {
+    background-color: #4682B4; /* Dark blue button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #315f85; /* Slightly darker blue on hover */
 }
 
 footer {
