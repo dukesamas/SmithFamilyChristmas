@@ -40,9 +40,6 @@ function displayQuestion() {
     const weekNumberElement = document.getElementById("week-number");
     const optionsElement = document.getElementById("options");
 
-    // Debugging output
-    console.log('Current week number:', weekNumber);
-
     // Set the week number and question
     weekNumberElement.textContent = "Week " + weekNumber;
     const question = questions[weekNumber - 1] || { question: "No more questions for this year!" };
@@ -59,10 +56,41 @@ function displayQuestion() {
     });
 }
 
+function showModal(message, isCorrect) {
+    const modal = document.getElementById("modal");
+    const modalMessage = document.getElementById("modal-message");
+    const modalBg = document.getElementById("modal-bg");
+
+    modalMessage.textContent = message;
+    modal.style.display = "block";
+    modalBg.style.display = "block";
+
+    if (isCorrect) {
+        modal.style.backgroundColor = "#6BBE44"; // Green for correct
+    } else {
+        modal.style.backgroundColor = "#FF6347"; // Red for incorrect
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById("modal");
+    const modalBg = document.getElementById("modal-bg");
+
+    modal.style.display = "none";
+    modalBg.style.display = "none";
+}
+
 function submitAnswer() {
     const selectedOption = document.querySelector('input[name="option"]:checked');
     if (selectedOption) {
-        alert("Your answer: " + selectedOption.value);
+        const weekNumber = getWeekNumber();
+        const correctAnswer = questions[weekNumber - 1].correct;
+
+        if (selectedOption.value === correctAnswer) {
+            showModal("Correct! Your answer: " + selectedOption.value, true);
+        } else {
+            showModal("Incorrect. Your answer: " + selectedOption.value + ". The correct answer was: " + correctAnswer, false);
+        }
     } else {
         alert("Please select an option.");
     }
