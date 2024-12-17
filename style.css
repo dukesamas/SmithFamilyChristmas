@@ -1,3 +1,4 @@
+/* General Body Styling */
 body {
     font-family: 'Fredoka One', cursive; /* Fun, modern font */
     display: flex;
@@ -10,13 +11,21 @@ body {
     margin: 0;
 }
 
+/* Container for Questions and Answers */
 .container {
     text-align: center;
     background-color: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 320px; /* Slightly wider */
+    width: 320px; /* Slightly wider for better readability */
+}
+
+/* Styling for the Week Number and Question */
+#week-number {
+    font-size: 18px;
+    color: #555; /* Grayish color */
+    margin-bottom: 10px;
 }
 
 #question {
@@ -25,6 +34,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Multiple Choice Options Styling */
 #options {
     text-align: left; /* Align options under the question */
     margin-top: 10px;
@@ -38,6 +48,7 @@ label {
     font-size: 16px;
 }
 
+/* Submit Button Styling */
 button {
     background-color: #4682B4; /* Dark blue button */
     color: white;
@@ -54,13 +65,14 @@ button:hover {
     background-color: #315f85; /* Slightly darker blue on hover */
 }
 
+/* Footer Styling */
 footer {
     margin-top: 20px;
     font-size: 14px;
     color: #555;
 }
 
-/* Modal styles */
+/* Modal Background Styling */
 .modal-bg {
     position: fixed;
     top: 0;
@@ -72,6 +84,7 @@ footer {
     z-index: 1000;
 }
 
+/* Modal Content Box */
 .modal {
     position: fixed;
     top: 50%;
@@ -92,6 +105,7 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Modal Button Styling */
 .modal button {
     background-color: #4682B4;
     color: white;
@@ -100,9 +114,9 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 .modal button:hover {
     background-color: #315f85;
 }
-
